@@ -3,15 +3,15 @@ import glob
 import json
 from tabnanny import check
 
-main_folder = '/raid/asap7772'
-which_day = 'offline_finetune_single_task_with_target_mixing_ratio'
+main_folder = '/home/aviralkumar/hdd/'
+which_day = 'autoregressive_rerun'
 cmd_file = 'scp_cmd.sh'
-output_dir = '/media/harddrive/trainingdata/anikait_exps/offline_finetune_single_task_with_target_mixing_ratio'
+output_dir = '/raid/asap7772/autoregressive_rerun/'
 
-which_checkpoints=[240000, 280000, 300000, 320000, 360000]
+which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000]
 
 check_json=dict(
-     target_dataset={'toykitchen6_knife_in_pot'},
+    #  target_dataset={'toykitchen6_knife_in_pot'},
 )
 check_train_json=dict(
    
@@ -59,20 +59,21 @@ for dir in all_dirs:
         
         output_file.write(f"echo 'Copying {dir}' \n")
         folder_to_make = f'{output_dir}/{dir.split(sub_path)[-1]}'
-        mkdir_command = f'mkdir -p {folder_to_make} \n'
+        mkdir_command = f"ssh ada 'mkdir -p {folder_to_make}' \n"
         output_file.write(mkdir_command)
 
         fi='config.json'
-        scp_command = f'rsync -vae ssh ada:{dir}/{fi} {folder_to_make} \n'
+        scp_command = f'rsync -vae ssh {dir}/{fi} ada:{folder_to_make} \n'
         output_file.write(scp_command)
 
         for fi in os.listdir(dir):
             if 'checkpoint' in fi and fi != 'checkpointtmp':
                 which = int(fi.split('checkpoint')[-1])
-                if which in which_checkpoints or which % 100000 == 0:
+                if which in which_checkpoints:
+                # if which in which_checkpoints or which % 100000 == 0:
                     print(f'added scp command for {which}')
 
-                    scp_command = f'scp ada:{dir}/{fi} {folder_to_make} \n'
+                    scp_command = f'rsync -vae ssh {dir}/{fi} ada:{folder_to_make} \n'
                     output_file.write(scp_command)
                     # print(scp_command)      
         
