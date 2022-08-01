@@ -4,9 +4,9 @@ import json
 from tabnanny import check
 
 main_folder = '/home/aviralkumar/hdd/'
-which_day = 'autoregressive_rerun'
+which_day = 'autoregressive_benchmark'
 cmd_file = 'scp_cmd.sh'
-output_dir = '/raid/asap7772/autoregressive_rerun/'
+output_dir = '/raid/asap7772/autoregressive_benchmark/'
 
 which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000]
 
@@ -69,8 +69,7 @@ for dir in all_dirs:
         for fi in os.listdir(dir):
             if 'checkpoint' in fi and fi != 'checkpointtmp':
                 which = int(fi.split('checkpoint')[-1])
-                if which in which_checkpoints:
-                # if which in which_checkpoints or which % 100000 == 0:
+                if which in which_checkpoints or which % 100000 == 0:
                     print(f'added scp command for {which}')
 
                     scp_command = f'rsync -vae ssh {dir}/{fi} ada:{folder_to_make} \n'
