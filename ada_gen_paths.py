@@ -4,11 +4,11 @@ import json
 from tabnanny import check
 
 main_folder = '/home/aviralkumar/hdd/'
-which_day = 'autoregressive_benchmark'
+which_day = 'autoregressive_benchmark_drop'
 cmd_file = 'scp_cmd.sh'
-output_dir = '/raid/asap7772/autoregressive_benchmark/'
+output_dir = '/raid/asap7772/autoregressive_benchmark_drop/'
 
-which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000]
+which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000, 240000]
 
 check_json=dict(
     #  target_dataset={'toykitchen6_knife_in_pot'},
