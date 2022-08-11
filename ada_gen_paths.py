@@ -4,12 +4,12 @@ import json
 from tabnanny import check
 
 main_folder = '/home/aviralkumar/hdd/'
-which_day = 'awbc_bcinit'
+which_day = 'autoregressive_target_only'
 cmd_file = 'scp_cmd.sh'
-output_dir = '/raid/asap7772/awbc_bcinit/'
+output_dir = '/raid/asap7772/autoregressive_target_only/'
 
-# which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000, 240000]
-which_checkpoints=[120000, 180000, 320000, 360000, 440000, 480000]
+which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000, 240000]
+# which_checkpoints=[120000, 180000, 320000, 360000, 440000, 480000]
 
 check_json=dict(
     #  target_dataset={'toykitchen6_knife_in_pot'},
