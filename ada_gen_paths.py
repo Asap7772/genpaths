@@ -4,9 +4,9 @@ import json
 from tabnanny import check
 
 main_folder = '/home/aviralkumar/hdd/'
-which_day = 'diff_views'
+which_day = 'bc_rot'
 cmd_file = 'scp_cmd.sh'
-output_dir = '/raid/asap7772/diff_views/'
+output_dir = '/raid/asap7772/bc_rot/'
 
 # which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000, 240000]
 which_checkpoints=[120000, 180000, 200000, 240000, 260000, 320000, 360000, 440000, 480000]
