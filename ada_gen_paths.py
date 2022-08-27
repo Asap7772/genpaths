@@ -4,12 +4,12 @@ import json
 from tabnanny import check
 
 main_folder = '/home/aviralkumar/hdd/'
-which_day = 'bc_rot'
+which_day = 'door_no_microwave'
 cmd_file = 'scp_cmd.sh'
-output_dir = '/raid/asap7772/bc_rot/'
+output_dir = '/raid/asap7772/door_no_microwave/'
 
 # which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000, 240000]
-which_checkpoints=[120000, 180000, 200000, 240000, 260000, 320000, 360000, 440000, 480000]
+which_checkpoints=[120000, 180000, 220000, 240000, 260000, 320000, 360000, 440000, 480000]
 
 check_json=dict(
     #  target_dataset={'toykitchen6_knife_in_pot'},
