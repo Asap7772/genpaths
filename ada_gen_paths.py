@@ -4,7 +4,7 @@ import json
 from tabnanny import check
 
 main_folder = '/home/aviralkumar/hdd/'
-which_day = 'door_no_microwave'
+which_day = 'microwave_bc'
 cmd_file = 'scp_cmd.sh'
 output_dir = '/raid/asap7772/microwave_bc/'
 
