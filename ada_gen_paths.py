@@ -84,9 +84,10 @@ for which_day in which_days:
             print()
             print(data['train_kwargs'])
             print()
+        print(f'total={i}')
         # print(x.split('/')[-2])
         # print()
 
-  print(f'total={i}')
+  
 print(output_file)
 output_file.close()
