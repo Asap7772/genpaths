@@ -87,6 +87,6 @@ for which_day in which_days:
         # print(x.split('/')[-2])
         # print()
 
-    print(f'total={i}')
-    print(output_file)
-    output_file.close()
+  print(f'total={i}')
+print(output_file)
+output_file.close()
