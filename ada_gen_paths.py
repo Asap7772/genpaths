@@ -4,9 +4,9 @@ import json
 from tabnanny import check
 
 main_folder = '/home/aviralkumar/hdd/'
-which_days = ('dueling_tk6_maxadv', 'dueling_tk6_pretrain', 'dueling_pretrain_awbcsep', 'dueling_tk6_cqlonly_weightedtanh', 'dueling_tk6_joint')
+which_days = ('sept14_2by2_v2')
 cmd_file = 'scp_cmd.sh'
-output_dir = '/raid/asap7772/microwave_bc/'
+output_dir = '/raid/asap7772/exps_sept14/'
  
 output_file = open(f'{main_folder}/{cmd_file}', 'w+')
 
@@ -61,7 +61,7 @@ for which_day in which_days:
             print()
 
             output_file.write(f"echo 'Copying {dir}' \n")
-            folder_to_make = f'{output_dir}/{dir.split(sub_path)[-1]}'
+            folder_to_make = f'{output_dir}/{which_day}/{dir.split(sub_path)[-1]}'
             mkdir_command = f"ssh ada 'mkdir -p {folder_to_make}' \n"
             output_file.write(mkdir_command)
 
