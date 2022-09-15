@@ -3,10 +3,10 @@ import glob
 import json
 from tabnanny import check
 
-# main_folder = '/home/aviralkumar/hdd/'
-# which_days = ('sept14_2by2_v2',)
-main_folder = '/home/anikaitsingh/hdd_quan/'
-which_days = ('09_14_cql_dueling',)
+main_folder = '/home/aviralkumar/hdd/'
+which_days = ('sept14_2by2_v2',)
+# main_folder = '/home/anikaitsingh/hdd_quan/'
+# which_days = ('09_14_cql_dueling',)
 
 cmd_file = 'scp_cmd.sh'
 output_dir = '/raid/asap7772/exps_sept14/'
