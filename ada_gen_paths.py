@@ -69,7 +69,7 @@ for which_day in which_days:
             output_file.write(mkdir_command)
 
             fi='config.json'
-            scp_command = f'rsync -–ignore-existing -vae ssh {dir}/{fi} ada:{folder_to_make} \n'
+            scp_command = f'rsync -vae ssh {dir}/{fi} ada:{folder_to_make} \n'
             output_file.write(scp_command)
 
             for fi in os.listdir(dir):
@@ -78,7 +78,7 @@ for which_day in which_days:
                     if which in which_checkpoints or which % 100000 == 0:
                         print(f'added scp command for {which}')
 
-                        scp_command = f'rsync –-ignore-existing -vae ssh {dir}/{fi} ada:{folder_to_make} \n'
+                        scp_command = f'rsync -vae ssh {dir}/{fi} ada:{folder_to_make} \n'
                         output_file.write(scp_command)
                         # print(scp_command)      
 
