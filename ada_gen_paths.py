@@ -5,7 +5,7 @@ from tabnanny import check
 from os.path import expanduser
 home = expanduser("~")
 
-main_folder = f'{home}/hdd/'
+main_folder = f'{home}/hdd_quan/'
 which_days = ('sept15_no_all_sarsa', 'sept15_sarsa_pretrain_no_detach', 'sept14_sarsa_pretrain', 'sept14_sarsa_pretrain_all_cql_finetune')
 # main_folder = '/home/anikaitsingh/hdd_quan/'
 # which_days = ('09_14_cql_dueling',)
