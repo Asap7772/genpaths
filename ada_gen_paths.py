@@ -5,9 +5,9 @@ from tabnanny import check
 from os.path import expanduser
 home = expanduser("~")
 
-# main_folder = f'{home}/hdd_quan/'
+main_folder = f'{home}/hdd/'
 # which_days = ('sept15_no_all_sarsa', 'sept15_sarsa_pretrain_no_detach', 'sept14_sarsa_pretrain', 'sept14_sarsa_pretrain_all_cql_finetune')
-main_folder = '/home/anikaitsingh/hdd_quan/'
+# main_folder = '/home/anikaitsingh/hdd_quan/'
 which_days = ('sept16_vanilla_other_tasks',)
 
 cmd_file = 'scp_cmd.sh'
