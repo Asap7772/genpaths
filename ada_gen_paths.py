@@ -8,10 +8,10 @@ home = expanduser("~")
 main_folder = f'{home}/hdd/'
 # which_days = ('sept15_no_all_sarsa', 'sept15_sarsa_pretrain_no_detach', 'sept14_sarsa_pretrain', 'sept14_sarsa_pretrain_all_cql_finetune')
 # main_folder = '/home/anikaitsingh/hdd_quan/'
-which_days = ('0921_awbc_abalation',)
+which_days = ('0922_awbc_humandata',)
 
 cmd_file = 'scp_cmd.sh'
-output_dir = '/raid/asap7772/exps_sept20/'
+output_dir = '/raid/asap7772/exps_sept22/'
  
 output_file = open(f'{main_folder}/{cmd_file}', 'w+')
 
