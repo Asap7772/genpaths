@@ -11,7 +11,7 @@ main_folder = f'{home}/hdd/'
 which_days = ('0923_rerun_awbc_ablation',)
 
 cmd_file = 'scp_cmd.sh'
-output_dir = '/raid/asap7772/exps_sept22/'
+output_dir = '/raid/asap7772/exps_sept24/'
  
 output_file = open(f'{main_folder}/{cmd_file}', 'w+')
 
