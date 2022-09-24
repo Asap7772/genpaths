@@ -8,7 +8,7 @@ home = expanduser("~")
 main_folder = f'{home}/hdd/'
 # which_days = ('sept15_no_all_sarsa', 'sept15_sarsa_pretrain_no_detach', 'sept14_sarsa_pretrain', 'sept14_sarsa_pretrain_all_cql_finetune')
 # main_folder = '/home/anikaitsingh/hdd_quan/'
-which_days = ('0922_awbc_humandata',)
+which_days = ('0923_rerun_awbc_ablation',)
 
 cmd_file = 'scp_cmd.sh'
 output_dir = '/raid/asap7772/exps_sept22/'
@@ -18,7 +18,7 @@ output_file = open(f'{main_folder}/{cmd_file}', 'w+')
 for which_day in which_days:
     print(f'Path = {which_day}')
     # which_checkpoints=[80000, 100000, 120000, 140000, 160000, 180000, 240000]
-    which_checkpoints=[120000, 180000, 220000, 240000, 260000, 320000, 360000, 440000, 480000]
+    which_checkpoints=[180000, 220000, 240000, 260000, 280000, 320000, 360000]
 
     check_json=dict(
         #  target_dataset={'toykitchen6_knife_in_pot'},
